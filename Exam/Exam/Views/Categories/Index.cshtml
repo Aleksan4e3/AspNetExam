@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Exam.Models.Category>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Add New", "Edit")
+</p>
+
+@foreach (var item in Model)
+{
+    if (item.ParentId == null)
+    {
+        <ul class="myTree">
+            <li>
+                @CreateTree(item)
+            </li>
+        </ul>
+    }
+}
+
+@helper CreateTree(Exam.Models.Category node)
+{
+if (node.SubCategories.Count > 0)
+{
+        <details>
+            <summary>
+                @node.Name
+                @AddEditDeleteLinks(node)
+            </summary>
+            <ul>
+                @foreach (var item in node.SubCategories)
+                {
+                    <li>
+                        @CreateTree(item)
+                    </li>
+
+                }
+            </ul>
+        </details>
+    }
+    else
+    {
+        @node.Name
+        @AddEditDeleteLinks(node)
+    }
+
+}
+
+@helper AddEditDeleteLinks(Exam.Models.Category node)
+{
+    <span>
+        @Html.ActionLink("Edit", "Edit", new { id = node.Id }) |
+        @Html.ActionLink("Delete", "Delete", new { id = node.Id })
+    </span>
+}
