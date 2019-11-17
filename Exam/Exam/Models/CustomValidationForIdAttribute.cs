@@ -11,7 +11,7 @@ namespace Exam.Models
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             var id = validationContext.ObjectType.GetProperty("Id").GetValue(validationContext.ObjectInstance);
-            if (!value.Equals(id))
+            if (value == null || !value.Equals(id))
             {
                 return ValidationResult.Success;
             }
