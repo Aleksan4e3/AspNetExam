@@ -1,4 +1,5 @@
 ﻿using Exam.Models;
+using log4net;
 using System.Data.Entity;
 using System.Net;
 using System.Threading.Tasks;
@@ -8,6 +9,8 @@ namespace Exam.Controllers
 {
     public class CategoriesController : Controller
     {
+        private static readonly ILog Log = LogManager.GetLogger(typeof(CategoriesController));
+
         private ExamContext db = new ExamContext();
 
         // GET: Categories
