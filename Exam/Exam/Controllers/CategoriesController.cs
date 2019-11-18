@@ -37,6 +37,7 @@ namespace Exam.Controllers
             {
                 db.Categories.Add(category);
                 await db.SaveChangesAsync();
+                Log.Info($"Create category {category.Name}");
                 return RedirectToAction("Index");
             }
 
