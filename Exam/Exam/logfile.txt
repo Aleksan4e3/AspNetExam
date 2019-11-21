@@ -1,6 +1,0 @@
-2019-11-18 19:43:03,157 [9] INFO  Exam.Controllers.CategoriesController [(null)] - Create category ThatsAll
-2019-11-18 19:43:16,601 [9] INFO  Exam.Controllers.CategoriesController [(null)] - Category with Id 27 has been changed to ThatsIsNotAll
-2019-11-18 19:43:43,613 [15] INFO  Exam.Controllers.CategoriesController [(null)] - Create category ThatsIsNotAll
-2019-11-18 19:43:55,947 [9] INFO  Exam.Controllers.CategoriesController [(null)] - Category with Id 36 has been changed to Thats
-2019-11-18 19:44:03,779 [9] INFO  Exam.Controllers.CategoriesController [(null)] - Category Thats was deleted
-2019-11-18 19:44:07,732 [13] INFO  Exam.Controllers.CategoriesController [(null)] - Category ThatsIsNotAll was deleted
