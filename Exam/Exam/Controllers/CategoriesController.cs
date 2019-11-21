@@ -107,7 +107,6 @@ namespace Exam.Controllers
             Category category = await db.Categories.FindAsync(id);
             db.Categories.Remove(category);
             await db.SaveChangesAsync();
-            Log.Info($"Category {category.Name} was deleted");
             return RedirectToAction("Index");
         }
 
