@@ -1,0 +1,6 @@
+2019-11-21 17:13:32,440 [14] INFO  Exam.Models.ExamContext [(null)] - Added category {Id = 22, Name = xxxx, ParentId = }
+2019-11-21 17:14:00,578 [15] INFO  Exam.Models.ExamContext [(null)] - Modified category {Id = 22, Name = xxxxYYY, ParentId = }
+2019-11-21 17:15:04,218 [13] INFO  Exam.Models.ExamContext [(null)] - Added category {Id = 25, Name = TestCreate, ParentId = 1}
+2019-11-21 17:15:36,544 [18] INFO  Exam.Models.ExamContext [(null)] - Deleted category {Id = 22, Name = xxxxYYY, ParentId = }
+2019-11-21 17:17:18,209 [24] INFO  Exam.Models.ExamContext [(null)] - Modified category {Id = 1013, Name = Bracelets, ParentId = 1}
+2019-11-21 17:18:02,724 [28] INFO  Exam.Models.ExamContext [(null)] - Modified category {Id = 1013, Name = Bracelets, ParentId = }
