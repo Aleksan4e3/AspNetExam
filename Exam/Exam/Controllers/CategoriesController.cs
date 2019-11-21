@@ -78,7 +78,6 @@ namespace Exam.Controllers
             {
                 db.Entry(category).State = EntityState.Modified;
                 await db.SaveChangesAsync();
-                Log.Info($"Category with Id {category.Id} has been changed to {category.Name}");
                 return RedirectToAction("Index");
             }
             ViewBag.ParentId = new SelectList(db.Categories, "Id", "Name", category.ParentId);
