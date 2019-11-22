@@ -101,9 +101,26 @@ namespace Exam.Controllers
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
             Category category = await db.Categories.FindAsync(id);
-            db.Categories.Remove(category);
+            DeleteSubCategories(category);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
+        }
+
+        [NonAction]
+        private void DeleteSubCategories(Category category)
+        {
+            if (category.SubCategories.Count > 0)
+            {
+                for (int i = category.SubCategories.Count - 1; i >= 0; i--)
+                {
+                    DeleteSubCategories(category.SubCategories[i]);
+                }
+                db.Categories.Remove(category);
+            }
+            else
+            {
+                db.Categories.Remove(category);
+            }
         }
 
         protected override void Dispose(bool disposing)
