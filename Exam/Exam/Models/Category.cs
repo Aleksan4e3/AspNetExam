@@ -9,7 +9,7 @@ namespace Exam.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Category()
         {
-            SubCategories = new HashSet<Category>();
+            SubCategories = new List<Category>();
         }
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
@@ -23,7 +23,7 @@ namespace Exam.Models
         public int? ParentId { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Category> SubCategories { get; set; }
+        public virtual IList<Category> SubCategories { get; set; }
 
         public virtual Category Parent { get; set; }
     }
